@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="basket.css">
+    <title>Basket Page</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="content">
+            <form action="" name="bookForm" class="mainForm">
+                <div class="headline">
+                    <p>Замовлення на придбання товару</p>
+                </div>
+    
+                <div class="divSelectBook">
+                    <p>Назва товару</p>
+                    <select name="booksSelect" id="booksSelect">
+                        <option value="" defaulfValue>---select a book---</option>
+                        <option value="" data-price = "10.5">Гаррі Потер (part #1) - 10.5</option>
+                        <option value="" data-price = "12">Гаррі Потер (part #2) - 12</option>
+                        <option value="" data-price = "20.5">Гаррі Потер (part #3) - 20.5</option>
+                        <option value="" data-price = "10">Гаррі Потер (part #4) - 10</option>
+                        <option value="" data-price = "15">Гаррі Потер (part #5) - 15</option>
+                    </select>
+                </div>
+    
+                <div class="divCountPrice">
+                    <p>
+                        Кількість: <input type="number" min="1" value="0" id="count">
+                        Вартість: <input type="text" readonly id="booksCost"></p>
+                </div>
+    
+                <div class="delivery">
+                    <p>Спосіб доставки замовлення</p>
+                    <input type="radio" name="op1" id="post" value="Поштою">
+                    <label for = "post">Поштою</label><br>
+    
+                    <input type="radio" name="op1" id="toHome" value="Доставка додому">
+                    <label for = "toHome">Доставка додому</label><br>
+    
+                    <input type="checkbox" name="packing" id="packing" value="У святковій упаковці">
+                    <label for = "packing">У святковій упаковці</label><br>
+                </div>
+    
+                <div class="suma">
+                    <p>
+                        Загальна вартість замовлення 
+                        <input type="text" id="bill" readonly>
+                        <input type="submit" id="calcBill" value="Підрахувати">
+                    </p>
+                </div>
+    
+                <div class="userInfo">
+                    <p>Дані замовника</p>
+                    <p>
+                        Ім'я: <input type="text" name="" id="name">
+                        Адреса: <input type="text" name="" id="adress">
+                    </p>
+                </div>
+    
+                <div class="submitBlock">
+                    <input type="submit" id="reset" value="Відновити початкові значення полів">
+                    <input type="submit" id="send" value="Відіслати дані">
+                </div>
+            </form>
+        </div>
+        <table id="orders">
+            <tr>
+                <th>Назва</th>
+                <th>Кількість</th>
+                <th>Варіант доставки</th>
+                <th>Загальна вартість</th>
+                <th>Дані отримувача</th>
+                <th>Підтвердити / Скасувати</th>
+            </tr>
+        </table>
+    </div>
+    <script src="basket.js"></script>
+</body>
+</html>

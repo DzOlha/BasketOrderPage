@@ -4,45 +4,78 @@
 body {
     margin: 0;
 }
-
+/*
+#411fb1
+#c6b4ff
+*/
 .wrapper{
     position: relative;
     width: 100%;
     height: auto;
-    padding: 1%;
     text-align: center;
+    padding: 2%;
 }
 .content {
     position: relative;
     text-align: left;
-    background-color: #ADD8E6;
-    width: 80%;
-    margin-left: 10%;
+    width: 90%;
+    margin-left: 5%;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 .mainForm {
+    position: inherit;
     font-size: 20px;
+    background-color: none;
+    width: 100%;
+    margin-left: 0;
+}
+::-webkit-scrollbar
+{
+    width: 0;
 }
 
 .mainForm input, #booksSelect {
-    font-size: 16px;
+    font-size: 18px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    border-radius: 10px;
+    border: none;
+    height: 2em;
+    outline: none;
 }
+.divCountPrice, .userInfo div, .suma, .divSelectBook {
+    display: flex;
+    flex-direction: row;
+    column-gap: 0.5em;
+    align-items: center;
+}
+
 .mainForm, .headline, .divSelectBook, 
 .divCountPrice, .delivery, .suma, 
 .userInfo, .submitBlock {
-    border: 1px solid black;
     margin: 3px;
-    padding: 2px;
+    padding: 6px;
+    border-radius: 10px;
+    background-color:#b4c3ff;
+    margin: 10px;
+}
+.mainForm{
+    background-color: #1f41b1;
+    margin: 0;
 }
 p {
     margin: 0;
 }
 .headline {
     text-align: center;
+    background-color: #411fb1;
+    color: white;
+    font-size: 25px;
 }
 .suma, .submitBlock {
     text-align: right;
+    justify-content: right;
 }
+
 table, th, td{
     border: 1px solid black;
     table-layout: auto;
@@ -64,7 +97,9 @@ table td {
     padding: 10px;
 }
 th {
-    background-color: #dcf6ff;
+    background-color: #213aab;
+    color: white;
+    padding: 10px;
 }
 #yes, #no{
     width: 80%;
@@ -90,4 +125,52 @@ th {
     font-size: 18px;
     text-decoration: 2px solid underline #42ec0f;
     font-family: segoe print;
+}
+input {
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    height: 2em;
+}
+.delivery input {
+    height: 20px;
+    width: 20px;
+}
+input[type=submit]{
+    border: 3px solid #411fb1;
+    background-color: white;
+    height: 2em;
+    font-size: 18px;
+    font-weight: 550;
+}
+input[type=submit]:hover {
+    background-color: #411fb1;
+    color: white;
+    cursor: pointer;
+}
+input:hover {
+    outline: none;
+}
+@media (max-width: 768px){
+    .content {
+        width: 90%;
+        margin-left: 5%;
+    }
+    .mainForm {
+        width: 100%;
+    }
+    .divCountPrice, .userInfo div, .suma{
+        flex-direction: column;
+        row-gap: 0.5em;
+        align-items: baseline;
+    }
+    .suma, .submitBlock{
+        text-align: left;
+    }
+    .submitBlock input {
+        width: 49%;
+    }
+    .suma input{
+        width: 100%;
+    }
 }

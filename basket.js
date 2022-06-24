@@ -28,7 +28,7 @@ function required(){
             return true;
     }
     else {
-        alert("Заповність, будь ласка усі поля!");
+        alert("Please, fill in all fields!");
     }
 }
 function checkBook(){
@@ -102,9 +102,9 @@ let sendOrder = function(){
             count.innerHTML = countInput.value;
             del.innerHTML = deliveryMethod + "<span>" + isPacking + "</span>";
             BILL.innerHTML = bill.value;
-            infoUser.innerHTML =   "<p>Ім'я: " + Name.value + "</p><p>Адреса: " + adress.value + "</p>";
-            submit_cancel.innerHTML = "<p><input type='submit' id='yes' value='Підтвердити'></p>"+
-            "<p><input type='submit' id='no' value='Скасувати'></p>"
+            infoUser.innerHTML =   "<p>Name: " + Name.value + "</p><p>Adress: " + adress.value + "</p>";
+            submit_cancel.innerHTML = "<p><input type='submit' id='yes' value='Submit'></p>"+
+            "<p><input type='submit' id='no' value='Cancel'></p>"
             table.classList.add('active');
         }
     }
@@ -115,7 +115,7 @@ let submit_cancel_check = function(){
         e.preventDefault();
         let parent = e.target.parentNode;
         if(e.target.id == 'yes') {
-            parent.parentNode.innerHTML = "<p class='success'>Оформлено!</p>";
+            parent.parentNode.innerHTML = "<p class='success'>Created!</p>";
         }
         if(e.target.id == 'no'){
             let td = parent.parentNode;
